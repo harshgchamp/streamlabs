@@ -33,3 +33,4 @@ Route::get('submit-payment', function() {
 });
 
 Route::post('submit-payment', [PaymentController::class, 'brainTreeTransaction'])->name('submit-payment');
+Route::get('choose-plan/{planId}', [PaymentController::class, 'selectPlan'])->name('select-plan');

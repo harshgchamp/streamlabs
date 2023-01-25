@@ -80,4 +80,14 @@ class PaymentController extends Controller
         }
         
     }
+
+    public function selectPlan($planId) {
+        // dd($this->gateway->merchantAccount()->all());
+        $result = $this->gateway->subscription()->create([
+            'paymentMethodNonce' => $request->payment_method_nonce,
+            'planId' => $planId
+          ]);
+
+          dd($result);
+    }
 }

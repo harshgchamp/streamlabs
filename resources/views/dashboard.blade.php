@@ -13,8 +13,41 @@
                             {{ session('success') }}
                         </div>
                     @endif
-  
-                    You are Logged In
+
+                    @if (session('msg'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('msg') }}
+                        </div>
+                    @endif
+
+                    @if (session('error'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('error') }}
+                        </div>
+                    @endif
+
+                   <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Monthly Plan</h3>
+                                <h2>100,00 €</h2>
+                                <a href="/submit-payment" class="btn btn-primary">Choose</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Yearly Plan</h3>
+                                <h2>200,00 €</h2>
+                                <a href="/choose-plan/p8vb" class="btn btn-primary">Choose</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   
                 </div>
             </div>
         </div>
